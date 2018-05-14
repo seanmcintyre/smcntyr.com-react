@@ -7,6 +7,7 @@ import './styles';
 import { AppWrapper }from './App.styled';
 
 import { Clock } from './Clock/Clock';
+import { About } from './About/About';
 
 const skyline = () => 'foo';
 
@@ -20,7 +21,7 @@ class App extends Component {
           <h1>Sean McIntyre</h1>
           <span className="discipline">Product Designer, Engineer</span>
 
-          {/*<about></about>*/}
+        <About></About>
 
           <div className="stats">
             <a className="resume"

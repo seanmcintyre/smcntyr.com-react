@@ -1,0 +1,45 @@
+import React, { Component } from 'react';
+import { AboutWrapper }from './About.styled';
+
+export class About extends Component {
+
+  render() {
+    return (
+      <AboutWrapper>
+        <p>Sean is a designer and front end engineer from Texas, currently residing in Brooklyn.</p>
+
+        <p>Her pronouns are <em>she</em> and <em>they</em>.</p>
+
+        {/* <!-- <p>She has been incredibly passionate about desing from a young, and she views the discipline far beyond the little shapes on your black mirror or the geometry of a handle thoughtfully selected for a door. Design is cocerned with commuication and interaction of objects—digital and physical. And as the world spins faster, brighter, and louder, she believes the use of design thinking to simplify and elate our environments is of critical importance.</p> --> */}
+
+        <div class="fun">
+          {/* <ul @slideFade> */}
+          <ul>
+            <h3>fun facts about Sean</h3>
+            <li>
+              <span class="emoji">🧘🏻‍</span>
+              <span>buddhist/athe<em>ish</em>, daily meditator</span>
+            </li>
+            <li>
+              <span class="emoji">🌱</span>
+              <span>aspiring to veganism (with wavering success)</span>
+            </li>
+            <li>
+              <span class="emoji">🐶</span>
+              <span>her BFF is a 17 year old Westie named Murphy</span>
+            </li>
+            <li>
+              <span class="emoji">🖌</span>
+              <span>prefers to design <em>in & with</em> code instead of <em>for</em> code</span></li>
+            <li>
+              <span class="emoji">🌸</span>
+              <span>student of Kado (aka. Ikebana, the art of flower arrangment)</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* <!-- <span class="small">*She generally prefers <em>she</em> though, if you hadn't notice that about <em>her</em> yet! ❤️</span> --> */}
+      </AboutWrapper>
+    );
+  }
+}

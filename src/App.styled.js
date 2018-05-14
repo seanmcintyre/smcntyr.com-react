@@ -16,6 +16,9 @@ const tag = `
 `;
 
 export const AppWrapper = styled.div`
+
+  font-family: 'Tajawal', serif;
+
   @keyframes fadeInA {
     0% {
       opacity: 0;
