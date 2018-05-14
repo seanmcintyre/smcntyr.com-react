@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 import { ClockWrapper }from './Clock.styled';
+import { gradients } from './sky';
 
+const leadingZero = (i) => (i < 10 ? i = '0' + i : i);
 const nextHour = (hour) => hour + 1 < 24 ? { hour: hour + 1 } : { hour: 0 };
+const gradient = (hour) => `linear-gradient(${gradients[leadingZero(hour)]})`;
+const setTime = (hour) => { document.body.style.background = gradient(hour) }
 
 export class Clock extends Component {
   constructor() {
@@ -13,10 +17,13 @@ export class Clock extends Component {
       minute: 0,
       second: 0
     };
+
+    setTime(this.state.hour);
   }
 
   nextHour = () => {
     this.setState(prevState => nextHour(this.state.hour));
+    setTime( nextHour(this.state.hour).hour );
   }
 
   getDash = () => {
