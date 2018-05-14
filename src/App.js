@@ -2,44 +2,13 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import logo from './logo.svg';
-import './App.css';
 import './styles';
 
-import { AppWrapper }from './App.styled.js';
+import { AppWrapper }from './App.styled';
+
+import { Clock } from './Clock/Clock';
 
 const skyline = () => 'foo';
-const nextHour = (hour) => hour + 1 < 24 ? { hour: hour + 1 } : { hour: 0 };
-
-class Clock extends Component {
-
-  constructor() {
-    super()
-    this.state = {
-      hour: 10
-    };
-  }
-
-  nextHour = () => {
-    this.setState(prevState => nextHour(this.state.hour));
-  }
-
-  render() {
-    return (
-      <div>
-        <svg className="clock">
-          {/*ng6: [style.stroke-dasharray]="clock.getDash()">*/}
-            <circle id="circle" r="37.5" cx="75" cy="75"></circle>
-        </svg>
-
-        <span className="hour"
-          onClick={this.nextHour}>
-          {this.state.hour}
-        </span>
-
-      </div>
-    );
-  }
-}
 
 class App extends Component {
   render() {
