@@ -1,4 +1,19 @@
 import styled from 'styled-components';
+import { rgba } from 'polished'
+
+const tag = `
+  padding: 7px 10px 3px;
+  border: 1px solid ${rgba('white', 0.5)};
+  border-radius: 4px;
+  margin: 10px 0 0 15px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.67rem;
+  line-height: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  vertical-align: baseline;
+`;
 
 export const AppWrapper = styled.div`
   @keyframes fadeInA {
@@ -51,7 +66,7 @@ export const AppWrapper = styled.div`
     font-size: 0.75em;
     font-weight: 300;
     font-family: 'roboto mono', monospace;
-    border-bottom: 1px solid rgba(white, 0.334);
+    border-bottom: 1px solid ${rgba('white', 0.334)};
     padding-bottom: 50px;
 
     @media screen and (min-width: 720px) {
@@ -60,8 +75,8 @@ export const AppWrapper = styled.div`
   }
 
   .stats {
-  border-top: 1px solid rgba(white, 0.334);
-  border-bottom:  1px solid rgba(white, 0.334);
+  border-top: 1px solid ${rgba('white', 0.334)};
+  border-bottom:  1px solid ${rgba('white', 0.334)};
   padding: 50px 0;
   overflow: hidden;
 
@@ -90,7 +105,7 @@ export const AppWrapper = styled.div`
     }
 
     span {
-      @include tag;
+      ${tag}
       margin: 10px 15px 0 0;
 
       @media screen and (min-width: 720px) {
@@ -101,7 +116,7 @@ export const AppWrapper = styled.div`
 
   .resume,
   .portfolio {
-      border: 1px solid rgba(white, 0.5);
+      border: 1px solid ${rgba('white', 0.5)};
       min-width: 150px;
       max-width: 150px;
       min-height: 150px;
@@ -110,7 +125,7 @@ export const AppWrapper = styled.div`
       margin: 0 50px 50px;
       padding: 30px 20px;
       transition: 100ms;
-      background: rgba(white, 0);
+      background: ${rgba('white', 0)};
       text-align: center;
 
       @media screen and (min-width: 720px) {
@@ -120,8 +135,8 @@ export const AppWrapper = styled.div`
 
       &:hover {
         transform: scale(1.02) translateY(-1px);
-        border: 1px solid rgba(white, 0.8);
-        background: rgba(white, 0.05);
+        border: 1px solid ${rgba('white', 0.8)};
+        background: ${rgba('white', 0.05)};
       }
   }
 
@@ -154,7 +169,7 @@ export const AppWrapper = styled.div`
 
     > div {
       padding: 20px 0;
-      border-bottom: 1px dashed rgba(white, 0);
+      border-bottom: 1px dashed ${rgba('white', 0)};
     }
 
     > div > *:first-child {
@@ -171,7 +186,7 @@ export const AppWrapper = styled.div`
     padding: 20px 50px;
     display: block;
     color: white;
-    border-bottom: 1px dashed rgba(white, 0.3);
+    border-bottom: 1px dashed ${rgba('white', 0.3)};
     display: flex;
     transition: 450ms;
 
@@ -183,12 +198,12 @@ export const AppWrapper = styled.div`
       display: flex;
       margin-right: 32px;
       justify-content: center;
-      border: 1px solid rgba(white, 0.5);
+      border: 1px solid ${rgba('white', 0.5)};
       border-radius: 3px;
     }
 
     .role {
-      @include tag;
+      ${tag}
     }
   }
 
