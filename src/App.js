@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
 import logo from './logo.svg';
 import './App.css';
+import './styles';
+
+import { AppWrapper }from './App.styled.js';
 
 const skyline = () => 'foo';
 const nextHour = (hour) => hour + 1 < 24 ? { hour: hour + 1 } : { hour: 0 };
@@ -39,7 +44,7 @@ class Clock extends Component {
 class App extends Component {
   render() {
     return (
-      <div>
+      <AppWrapper>
         <Clock></Clock>
 
         <main>
@@ -82,7 +87,8 @@ class App extends Component {
         <img className="skyline"
           src={skyline()}
           alt="" />
-      </div>
+
+      </AppWrapper>
     );
   }
 }
